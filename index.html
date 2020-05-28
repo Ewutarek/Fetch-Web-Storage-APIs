@@ -2,11 +2,21 @@
 <html>
 <head>
 <title>Fetch & Web Storage APIs</title>
+<script src="script.js"></script>
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<h1>Stuff that's been posted</h1>
+<ul id = "Posted things" >
+</ul>
+
+<form onsubmit = "return userPosting(theMessage) " >
+    <label for="theMessage">Type your message here</label>
+    <input type="text" id="theMessage" name="theMessage">
+    <input type="submit" value="Submit">
+</form>
+
+<br><br>
 
 </body>
 </html>
