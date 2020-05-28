@@ -1,22 +1,69 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fetch & Web Storage APIs</title>
 <script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <div class="header">
+        <h1>Tell me all your serets</h1>
+        <p>...even the stupid ones</p>
+    </div>
 
-<h1>Stuff that's been posted</h1>
-<ul id = "Posted things" >
-</ul>
+    <form onsubmit = "return userPosting(theMessage)" >
+        <label for="theMessage">Type your message here</label>
+        <input type="text" id="theMessage" name="theMessage">
+        <input type="submit" value="Submit">
+    </form>
+   
+   
+    <!-- <div class = "row">
+        <div class = "leftcolumn">
+            <div class="card">
+                <form onsubmit = "return userPosting(theMessage) " >
+                    <label for="theMessage">Type your message here</label>
+                    <input type="text" id="theMessage" name="theMessage">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
 
-<form onsubmit = "return userPosting(theMessage) " >
-    <label for="theMessage">Type your message here</label>
-    <input type="text" id="theMessage" name="theMessage">
-    <input type="submit" value="Submit">
-</form>
+        </div>
 
-<br><br>
+        <div class = "rightcolumn">
+            <div class="card">
+               
+            </div>
+        </div>
+        
+    </div> -->
+    
+    <ul id = "list" >
+
+    </ul>
+
+    <ul id="myUL">
+        <li>Adele</li>
+        <li>Agnes</li>
+      
+        <li>Billy</li>
+        <li><a href="#">Bob</a></li>
+      
+        <li><a href="#">Calvin</a></li>
+        <li><a href="#">Christina</a></li>
+        <li><a href="#">Cindy</a></li>
+      </ul>
+      
+
+   
+
+    <!-- <div class= "footer">
+        <h2>Tell me all your sectrets 2020.</h2>
+    </div> -->
 
 </body>
 </html>
+
+
+
