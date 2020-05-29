@@ -84,66 +84,24 @@ function userPosting(_theMessage)
     })
 }
 
-// Search Function with a tags
-// function mySearchFunction() {
-//     // Declare variables
-//     var input, filter, ul, li, a, i, txtValue;
-//     input = document.getElementById('myInput');
-//     filter = input.value.toUpperCase();
-//     ul = document.getElementById("list");
-//     li = ul.getElementsByTagName('li');
-  
-//     // Loop through all list items, and hide those who don't match the search query
-//     for (i = 0; i < li.length; i++) {
-//       a = li[i].getElementsByTagName("a")[0];
-//       txtValue = a.textContent || a.innerText;
-//       if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//         li[i].style.display = "";
-//       } else {
-//         li[i].style.display = "none";
-//       }
-//     }
-//   }
-
-// Search Function without a tags
-function mySearchFunction() {
+  //Search function for divs
+  function mySearchFunction() {
     // Declare variables
-    var input, filter, ul, li, a, i, txtValue;
+    var input, filter, div_card, div_grid, p, i, txtValue;
     input = document.getElementById('myInput');
     filter = input.value.toUpperCase();
-    ul = document.getElementById("list");
-    li = ul.getElementsByTagName('li');
+    div_grid = document.getElementsByClassName("grid-container")[0];
+    div_card = div_grid.getElementsByClassName("card");
   
     // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++) {
-      a = li[i];
-      txtValue = a.textContent || a.innerText;
+    for (i = 0; i < div_card.length; i++) {
+      p = div_card[i].getElementsByTagName("p")[0];
+      txtValue = p.textContent || p.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        li[i].style.display = "";
+        div_card[i].style.display = "";
       } else {
-        li[i].style.display = "none";
+        div_card[i].style.display = "none";
       }
     }
   }
-
-  //Search function for divs
-  // function mySearchFunction() {
-  //   // Declare variables
-  //   var input, filter, ul, li, a, i, txtValue;
-  //   input = document.getElementById('myInput');
-  //   filter = input.value.toUpperCase();
-  //   div = document.getElementsByClassName();
-  //   li = ul.getElementsByTagName('li');
-  
-  //   // Loop through all list items, and hide those who don't match the search query
-  //   for (i = 0; i < li.length; i++) {
-  //     a = li[i];
-  //     txtValue = a.textContent || a.innerText;
-  //     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-  //       li[i].style.display = "";
-  //     } else {
-  //       li[i].style.display = "none";
-  //     }
-  //   }
-  // }
 
