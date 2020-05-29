@@ -9,14 +9,14 @@
 <body>
 
     <div class="header">
-        <h1>Tell me all your secrets</h1>
-        <p>...even the stupid ones</p>
+        <h1>Banter</h1>
+        <p>...very original, I know</p>
     </div>  
    
    
     <div class = "row">
         <div class = "leftcolumn">
-            <div class="card">
+            <div class="section">
                 <form onsubmit = "return userPosting(theMessage) " >
                     <label for="theMessage">Type your message here</label>
                     <input type="text" id="theMessage" name="theMessage">
@@ -24,15 +24,17 @@
                 </form>
             </div>
 
-       <div class="card">
+       <div class="section">
         <input type="text" id="myInput" onkeyup="mySearchFunction()" placeholder="Search for messages..">  
        </div>
         </div>
 
         <div class = "rightcolumn">
-            <div class="card">
-                <ul id = "list" >
-                </ul>
+            <div class="section">
+                <!-- <ul id = "list" >
+                </ul> -->
+                <div class="grid-container">
+                </div>
             </div>
         </div>
     </div>
