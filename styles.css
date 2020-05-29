@@ -1,4 +1,4 @@
-/* * {
+* {
     box-sizing: border-box;
   }
   
@@ -6,7 +6,7 @@
     font-family: Arial;
     padding: 10px;
     background: #f1f1f1;
-  } */
+  }
   
 /* Header/Blog Title */
 .header {
@@ -33,7 +33,7 @@
     width: 75%;
     background-color: #f1f1f1;
     padding-left: 20px;
-    overflow: scroll;
+    /* overflow: scroll; */
   }
   
   
@@ -52,30 +52,46 @@
     clear: both;
   }
 
-  ul#list {
-    /* position: absolute; */
-    /* width: 450px;
-    margin: 100px auto 0; */
-    padding:10%;
-    /* box-sizing: border-box; */
-    background-color: rgb(43, 106, 161);
+  /* Styling the list */
+
+  ul
+  {
+     margin: 100px; 
+     box-sizing: border-box;
+     background: #216fa3 ;
+  }
+
+  ul li{
+      display: flex;
+      background: #54aeeb;
+      padding: 10px 20px;
+      color: #fff;
+      margin: 5px 0;
+      transition: .5s;
+  }
+
+  ul li:hover{
+      transform: scale(1.06);
+  }
+/* Search bar */
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
 }
 
-ul#myUL{
-    background-color: rgb(105, 131, 155);
-
-}
-
-/* ul li{
-    display: flex;
-    background-color: rgb(43, 106, 161);
-} */
-
+ /*Footer  */
 .footer {
     padding: 20px;
     text-align: center;
     background: #ddd;
     margin-top: 20px;
+    
   }
 
 

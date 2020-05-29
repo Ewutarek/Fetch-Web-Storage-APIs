@@ -7,19 +7,14 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div class="header">
-        <h1>Tell me all your serets</h1>
-        <p>...even the stupid ones</p>
-    </div>
 
-    <form onsubmit = "return userPosting(theMessage)" >
-        <label for="theMessage">Type your message here</label>
-        <input type="text" id="theMessage" name="theMessage">
-        <input type="submit" value="Submit">
-    </form>
+    <div class="header">
+        <h1>Tell me all your secrets</h1>
+        <p>...even the stupid ones</p>
+    </div>  
    
    
-    <!-- <div class = "row">
+    <div class = "row">
         <div class = "leftcolumn">
             <div class="card">
                 <form onsubmit = "return userPosting(theMessage) " >
@@ -29,38 +24,22 @@
                 </form>
             </div>
 
+       <div class="card">
+        <input type="text" id="myInput" onkeyup="mySearchFunction()" placeholder="Search for messages..">  
+       </div>
         </div>
 
         <div class = "rightcolumn">
             <div class="card">
-               
+                <ul id = "list" >
+                </ul>
             </div>
         </div>
-        
-    </div> -->
+    </div>
     
-    <ul id = "list" >
-
-    </ul>
-
-    <ul id="myUL">
-        <li>Adele</li>
-        <li>Agnes</li>
-      
-        <li>Billy</li>
-        <li><a href="#">Bob</a></li>
-      
-        <li><a href="#">Calvin</a></li>
-        <li><a href="#">Christina</a></li>
-        <li><a href="#">Cindy</a></li>
-      </ul>
-      
-
-   
-
-    <!-- <div class= "footer">
+    <div class= "footer">
         <h2>Tell me all your sectrets 2020.</h2>
-    </div> -->
+    </div>
 
 </body>
 </html>
