@@ -29,16 +29,7 @@ function addElement(list)
    
     
      function (list) {
-    //   function ellipsify (str) {
-    //     if (str.length > 10) {
-    //         return (str.substring(0, 10) + "...");
-    //     }
-    //     else {
-    //         return str;
-    //     }
-    // }
-
-    
+   
       let card_div = document.createElement("div");
       card_div.className = "card";
       let card_img = document.createElement("img");
@@ -47,29 +38,13 @@ function addElement(list)
       let content_p = document.createElement("p");
       content_p.innerHTML += list;
       card_img.src = imagesARR[Math.floor(Math.random() * imagesARR.length)];
-      // card_img.style = "width:100%";
-      card_div.appendChild(card_img);
       content_div.appendChild(content_p);
       card_div.appendChild(content_div);
+      card_div.appendChild(card_img);
       document.getElementsByClassName("grid-container")[0].appendChild(card_div);
 
   })
 }
-
-//Add elemnts with  <a> tags
-// function addElement(list)
-// {
-//   list.forEach( function (list) {
-//     let _a = document.createElement('a');
-//     let linkText = document.createTextNode(list);
-//     _a.appendChild(linkText);
-//     _a.href = "#";
-//     let newLi = document.createElement("li");
-//     newLi.appendChild(_a);
-//     document.getElementById('list').appendChild(newLi);
-//     // newLi.innerHTML += _a; 
-//   })
-// }
 
 //Posting message
 function userPosting(_theMessage)
@@ -80,6 +55,7 @@ function userPosting(_theMessage)
     }).then(function (response) {
     if (response.status == 200) {
         console.log("Ok!")
+        console.log( _theMessage.value)
     } else {console.log("Oh no!")}
     })
 }
@@ -101,7 +77,24 @@ function userPosting(_theMessage)
         div_card[i].style.display = "";
       } else {
         div_card[i].style.display = "none";
+
       }
     }
   }
+  
 
+
+
+
+  function onToggled() {
+    // Get the checkbox
+    var checkBox = document.getElementById("modeToggle");
+    var theme = document.getElementById('pageTheme');
+    if (checkBox.checked == true){
+      theme.href = "styles_dark.css";
+      console.log('Checked');
+    } else {
+      theme.href = "styles.css";
+        console.log('Not checked');
+    }
+  }

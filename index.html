@@ -2,45 +2,48 @@
 <html>
 <head> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fetch & Web Storage APIs</title>
+<title>Bantz</title>
 <script src="script.js"></script>
-<link rel="stylesheet" type="text/css" href="styles.css">
+<link id="pageTheme" rel="stylesheet" type="text/css" href="styles.css">
 </head>
+<link  rel="icon" href="Bantz_Logo_black.png" type="image/x-icon">
 <body>
 
     <div class="header">
-        <h1>Banter</h1>
-        <p>...very original, I know</p>
-    </div>  
-   
-   
-    <div class = "row">
-        <div class = "leftcolumn">
-            <div class="section">
-                <form onsubmit = "return userPosting(theMessage) " >
-                    <label for="theMessage">Type your message here</label>
-                    <input type="text" id="theMessage" name="theMessage">
+        <label class="switch">
+            <input id ="modeToggle" onClick="onToggled()" type="checkbox">
+            <span class="slider"></span>
+          </label>
+
+        <div class="row">
+            <div class="column">
+                <div id="logo"></div>
+            </div>
+
+            <div class="column">
+                <form id="msgForm" onsubmit = "return userPosting(theMessage)"  >
+                    <input type="text" id="theMessage" name="theMessage" placeholder="Type your message here..">
                     <input type="submit" value="Submit">
                 </form>
             </div>
 
-       <div class="section">
-        <input type="text" id="myInput" onkeyup="mySearchFunction()" placeholder="Search for messages..">  
-       </div>
+            <div class="column">
+                <form id="searchForm">
+                    <input type="text" id="myInput" onkeyup="mySearchFunction()" placeholder="Search for messages..">  
+                </form>
+            </div>
         </div>
+    </div>  
 
-        <div class = "rightcolumn">
+    
+      
             <div class="section">
-                <!-- <ul id = "list" >
-                </ul> -->
                 <div class="grid-container">
                 </div>
             </div>
-        </div>
-    </div>
-    
+             
     <div class= "footer">
-        <h2>Tell me all your sectrets 2020.</h2>
+        <h2>Bantz inc. 2020</h2>
     </div>
 
 </body>
