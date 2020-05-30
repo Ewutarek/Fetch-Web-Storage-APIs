@@ -10,10 +10,6 @@
 <body>
 
     <div class="header">
-        <label class="switch">
-            <input id ="modeToggle" onClick="onToggled()" type="checkbox">
-            <span class="slider"></span>
-          </label>
 
         <div class="row">
             <div class="column">
@@ -31,6 +27,13 @@
                 <form id="searchForm">
                     <input type="text" id="myInput" onkeyup="mySearchFunction()" placeholder="Search for messages..">  
                 </form>
+            </div>
+
+            <div class="column">
+                <label class="switch">
+                    <input id ="modeToggle" onClick="onToggled()" type="checkbox">
+                    <span class="slider"></span>
+                  </label>
             </div>
         </div>
     </div>  

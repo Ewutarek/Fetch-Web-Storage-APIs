@@ -18,7 +18,7 @@
 
 .column {
   float: left;
-  width: 33.33%;
+  width: 25%;
   height: 100px;
   padding-top: 20px;
 }
@@ -101,14 +101,15 @@
 
  /* Card styling */
  .card {
-   background-color: white;
+  background-color: white;
   border: 1px solid #d3d3d3;
   border-radius: .25rem;
   padding: 15px;
 }
 
 .card:hover{
-  background-color: #a7c5fd;
+  background-color: #f1f1f18f;
+  
 }
 
 .content {
@@ -117,8 +118,9 @@
 
 .content p{
   overflow: auto;
-  font-size: x-large;
+  font-size: large;
   font-weight: 300;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 
