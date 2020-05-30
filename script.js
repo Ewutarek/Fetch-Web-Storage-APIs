@@ -3,14 +3,6 @@
 fetch('https://2ubiyjczwh.execute-api.eu-west-2.amazonaws.com/wall').then(response => response.json())
 .then(data => addElement(data))
 
-// function addElement(list)
-// {
-//   list.forEach( function (list) {
-//       let newLi = document.createElement("li");
-//       document.getElementById('list').appendChild(newLi);
-//       newLi.innerHTML += list; 
-//   })
-// }
 
 // Database of dank imgaes
 let img_1 = "http://elelur.com/data_images/dog-breeds/chihuahua/chihuahua-01.jpg";
@@ -29,15 +21,20 @@ function addElement(list)
    
     
      function (list) {
-   
-      let card_div = document.createElement("div");
+    
+      //Create card
+      let card_div = document.createElement("div"); 
       card_div.className = "card";
+      //Create image
       let card_img = document.createElement("img");
+      card_img.src = imagesARR[Math.floor(Math.random() * imagesARR.length)];
+     // create content conatiner and add list item to p
       let content_div = document.createElement("div");
       content_div.className = "content";
       let content_p = document.createElement("p");
       content_p.innerHTML += list;
-      card_img.src = imagesARR[Math.floor(Math.random() * imagesARR.length)];
+     
+      //append p to conent within to created nested element
       content_div.appendChild(content_p);
       card_div.appendChild(content_div);
       card_div.appendChild(card_img);
@@ -49,15 +46,22 @@ function addElement(list)
 //Posting message
 function userPosting(_theMessage)
 {
-    fetch('https://2ubiyjczwh.execute-api.eu-west-2.amazonaws.com/wall', {
-    method: 'POST',
-    body: JSON.stringify({message: _theMessage.value})
-    }).then(function (response) {
-    if (response.status == 200) {
-        console.log("Ok!")
-        console.log( _theMessage.value)
-    } else {console.log("Oh no!")}
-    })
+   if (_theMessage.value.length >= 30) //charcter limit 
+   {
+    alert('Message should be 30 characters or less. Please shorten your message')
+   } else
+    {
+      fetch('https://2ubiyjczwh.execute-api.eu-west-2.amazonaws.com/wall', {
+      method: 'POST',
+      body: JSON.stringify({message: _theMessage.value})// push value entered fro user into lis
+      }).then(function (response) {
+      if (response.status == 200) {
+          console.log("Ok!")
+          console.log( _theMessage.value)
+      } else {console.log("Oh no!")}
+      })
+    }
+    
 }
 
   //Search function for divs
