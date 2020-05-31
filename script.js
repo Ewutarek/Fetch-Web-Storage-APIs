@@ -10,7 +10,12 @@ let img_2 = "https://i.ytimg.com/vi/ZXA4UN-oQnY/maxresdefault.jpg";
 let img_3 = "https://www.dailydot.com/wp-content/uploads/ec2/80/0e2a4c37fc69300576b91e9559695197.jpg";
 let img_4 = "https://media.giphy.com/media/MS1brboOXGZyM/giphy.gif"
 let img_5 = "https://media.giphy.com/media/26tPoyDhjiJ2g7rEs/giphy.gif";
-let imagesARR = [img_1,img_2,img_3,img_4,img_5];
+let img_6 = "https://www.cobblestoneflorist.com/Assets/Images/home-flowers.jpg"
+let img_7 = "https://www.plantes-etc.fr/sites/default/files/medias/images/plantes/jasminum%20grandiflorum.JPG"
+let img_8 ="https://images.wikia.com/villains/images/4/45/DoesThisLookUnsure2U.jpg";
+let img_9 ="https://i0.kym-cdn.com/entries/icons/original/000/016/546/hidethepainharold.jpg";
+let img_10 = "https://i.pinimg.com/originals/0f/ff/4b/0fff4bf62e741c11ee53b7f32dee426f.gif";
+let imagesARR = [img_1,img_2,img_3,img_4,img_5,img_6, img_7,img_8,img_9,img_10];
 
 //add card elements
 function addElement(list)
